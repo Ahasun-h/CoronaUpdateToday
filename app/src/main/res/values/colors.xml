@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffa800</color>
+    <color name="colorPrimaryDark">#ff6f00</color>
+    <color name="colorAccent">#425066</color>
+
+    <color name="tfe_semi_transparent">#66000000</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#3C3C3C</color>
+
+
+
+
+    <color name="colorTotalCases">#BB1C1E</color>
+    <color name="colorTodayCases">#EE6F52</color>
+
+    <color name="colorTotalDeaths">#EE6F52</color>
+    <color name="colorTodayDeaths">#F73E01</color>
+
+    <color name="colorActiveCases">#02A002</color>
+    <color name="colorRecover">#4D96D6</color>
+
+
+
+
+</resources>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SelectedCountryInformationActivity"
+    android:background="#E6E5E5"
+    android:padding="20dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/flagContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <ImageView
+                    android:id="@+id/flag"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:src="@color/colorRecover"
+                    android:layout_weight="3"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/country_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Country Name"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_weight="7"
+                    android:paddingLeft="8dp"/>
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/topContent"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="8dp"
+            android:layout_below="@+id/flagContent"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <org.eazegraph.lib.charts.PieChart
+                    android:id="@+id/piechart"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:weightSum="10">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="16dp"
+                            android:background="@color/colorTotalCases"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Cases"
+                            android:textSize="14sp"
+                            android:gravity="left"
+                            android:paddingLeft="4dp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_weight="9"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:weightSum="10">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="16dp"
+                            android:background="@color/colorTotalDeaths"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Deaths"
+                            android:textSize="14sp"
+                            android:gravity="left"
+                            android:paddingLeft="4dp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_weight="9"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:weightSum="10">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="16dp"
+                            android:background="@color/colorActiveCases"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Active Cases"
+                            android:textSize="14sp"
+                            android:gravity="left"
+                            android:paddingLeft="4dp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_weight="9"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:weightSum="10">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="16dp"
+                            android:background="@color/colorRecover"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Recover"
+                            android:textSize="14sp"
+                            android:gravity="left"
+                            android:paddingLeft="4dp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_weight="9"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topContent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.leo.simplearcloader.SimpleArcLoader
+                    android:id="@+id/loader"
+                    android:layout_centerInParent="true"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:arc_style="simple_arc"
+                    app:arc_speed="medium"
+                    android:visibility="gone"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/scrollState">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Our Country State"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:gravity="left"
+                            android:paddingLeft="10dp"
+                            android:layout_marginBottom="20dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorTotalCases" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Cases"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp" />
+
+                                <TextView
+                                    android:id="@+id/totalCases"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorTotalCases"
+                                    android:textAlignment="textEnd"/>
+
+                            </RelativeLayout>
+
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorTotalCases" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Today Cases"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp" />
+
+                                <TextView
+                                    android:id="@+id/todayCases"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorTodayCases"
+                                    android:textAlignment="textEnd"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorTotalCases" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Today Deaths"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp" />
+
+                                <TextView
+                                    android:id="@+id/todayDeaths"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorTodayDeaths"
+                                    android:textAlignment="textEnd"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorTotalCases" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Deaths"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp" />
+
+                                <TextView
+                                    android:id="@+id/totalDeaths"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorTotalDeaths"
+                                    android:textAlignment="textEnd"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorTotalCases" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Active Cases"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp" />
+
+                                <TextView
+                                    android:id="@+id/activeCases"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorActiveCases"
+                                    android:textAlignment="textEnd"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorTotalCases" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Recover Cases"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:gravity="left"
+                                    android:paddingLeft="10dp" />
+
+                                <TextView
+                                    android:id="@+id/recover"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorRecover"
+                                    android:textAlignment="textEnd"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorTotalCases" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
