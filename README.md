@@ -1,9 +1,7 @@
 # CoronaUpdateToday
 A News-based Android app
 
-CoronaUpdateToday is a news-update-based app whose goal is to give the user current corna update.
-Using this application user can easily get that time corona virus affected people amount and it also 
-give the statistical graphical view. 
+CoronaUpdateToday is a news-update-based app whose goal is to give the user current Corona update. Using this application User can easily get that time coronavirus affected people amount and this application also gives the statistical graphical view.
 
 # Functional Requirements :
 1.Search Country
