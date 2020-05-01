@@ -28,6 +28,9 @@ give the statistical graphical view.
 6.eazegraph:1.2.5l
 
 
-#Compile Sdk Version: 29
+#Sdk Version:
+1.Compile Sdk Version : 29
+2.Minimum Sdk Version : 21
 
-#Gradle Version : gradle-5.4.1
+#Gradle Version :
+gradle-5.4.1
